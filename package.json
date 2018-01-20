@@ -1,0 +1,32 @@
+{
+  "name": "heybuddy-bot",
+  "version": "1.0.0",
+  "description": "Helperbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DheerajKN/heybuddy-bot.git"
+  },
+  "author": "K. N. Dheeraj",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/DheerajKN/heybuddy-bot/issues"
+  },
+  "homepage": "https://github.com/DheerajKN/heybuddy-bot#readme",
+  "dependencies": {
+    "botkit": "^0.6.8",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "http": "0.0.0",
+    "money": "^0.2.0",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "uuid": "^3.2.1",
+    "witbot": "^2.1.0"
+  }
+}
