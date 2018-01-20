@@ -1,0 +1,1 @@
+SLACK_TOKEN=xoxb-301945045428-Y2dcvBwoynLsHvjHMgbA3hWr node index.js npm start

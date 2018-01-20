@@ -2,6 +2,8 @@ var Botkit = require('botkit')
 var http= require('http')
 var request=require('request')
 var cheerio=require('cheerio')
+var express= require('express')
+var path=require('path')
 
 var slackToken=process.env.SLACK_TOKEN
 
@@ -129,20 +131,19 @@ controller.hears(['convert (.*) (.*) to (.*)','(.*) (.*) to (.*)', 'How much is 
 
     if(undefined === sourceval || '' === sourceval || null === sourceval)
     {
-        bot.reply(message.text,"Source Index not added")
+        bot.reply(message.text,"Source Index not added please type again!!")
     }
     else if(undefined === destval || '' === destval || null === destval)
     {
-        bot.reply(message.text,"Destination Index not added")
+        bot.reply(message.text,"Destination Index not added please type again!!")
     }
     else{
       if(undefined === val || '' === val || null === val)
       {
           bot.reply(message.text,"Conversion value not added so considering as 1")
           val=1    }
-        var url="https://exchangerate.guru/"+sourceval.toLowerCase()+"/"+destval.toLowerCase()+"/"+val+"/"
 
-        request(url,function(err,resp,body){
+        request("https://exchangerate.guru/"+sourceval.toLowerCase()+"/"+destval.toLowerCase()+"/"+val+"/",function(err,resp,body){
           var $=cheerio.load(body)
           var valx=$('.form-control').get(1)
           var $valx=$(valx).attr('value')
@@ -164,4 +165,21 @@ bot.reply(message,val+" "+sourceval.toUpperCase()+" = "+$valx+" :money_mouth_fac
 bot.reply(message,":moneybag:"+ val+" "+sourceval.toUpperCase()+" = "+$valx+" :money_with_wings:"+" "+destval.toUpperCase())}
 else{bot.reply(message,val+" "+sourceval.toUpperCase()+" = "+$valx +" "+destval.toUpperCase())}
 }) }
+});
+
+controller.hears('time in (.*)', 'direct_message,direct_mention,mention', function(bot,message) {
+  var timeloc = message.match[1]
+
+  if(undefined === timeloc || '' === timeloc || null === timeloc)
+  {
+      bot.reply(message.text,"Location not added please type again!!")
+  }
+
+      request("https://www.timeanddate.com/worldclock/?query="+timeloc.toLowerCase(),function(err,resp,body){
+        var $=cheerio.load(body)
+        var timeval=$('td#p0.rbi')
+        var time =timeval.text()
+console.log(time)
+        bot.reply(message,"Day and Time in "+timeloc+" is: "+time)
+      })
 });
