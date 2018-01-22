@@ -4,6 +4,7 @@ var request=require('request')
 var cheerio=require('cheerio')
 
 var slackToken=process.env.SLACK_TOKEN
+var OpenweatherToken=process.env.OPENWEATHER_TOKEN
 
  var controller = Botkit.slackbot({
    debug: false
@@ -42,7 +43,7 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
         var options = {
             protocol : 'http:',
             host : 'api.openweathermap.org',
-            path : '/data/2.5/weather?q='+city.replace(" ","+")+'&appid=7bf212dface8e17114014161ddce3318',
+            path : '/data/2.5/weather?q='+city.replace(" ","+")+'&appid='+OpenweatherToken,
             port : 80,
             method : 'GET'
           }
@@ -92,6 +93,11 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
                               bot.reply(message,"The Temp is "+ Temp)
                               bot.reply(message,":barely_sunny:")
                               bot.reply(message,"There would be partly sunny in " + city)
+                              break
+                        case "Snow":
+                              bot.reply(message,"The Temp is "+Temp)
+                              bot.reply(message,":snow_cloud: :snowman:")
+                              bot.reply(message,"Please wear Warm clothes those living in " + city)
                               break
                 }
                           })
