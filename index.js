@@ -53,9 +53,8 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
                 body += data
                 weather = JSON.parse(body)
                 var Temp= Math.round(weather.main.temp - 273.15) + '°C '
-                console.log("weather :" + weather.weather[0].main)
+                console.log("weather: " + weather.weather[0].main)
                 msg="The Temp is "+ Temp + "and In " + city
-                var reaction = ""
                 switch(weather.weather[0].main)
                 {
                         case "Clear":
@@ -67,6 +66,7 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
                         case "Cloud":
                                 bot.reply(message,msg+" it's Raining")
                                 bot.reply(message,":cloud:")
+                                bot.reply(message,"Better to carry an Umbrella")
                                 break
                         case "Smoke":
                                 bot.reply(message,msg+" it's Foggy")
@@ -94,16 +94,7 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
                               bot.reply(message,"There would be partly sunny in " + city)
                               break
                 }
-                bot.api.reactions.add({
-                    timestamp: message.ts,
-                    channel: message.channel,
-                    name: reaction,
-                }, function(err, res) {
-                    if (err) {
-                        bot.botkit.log('Failed to add emoji reaction :(', err)
-                    }
-                })
-            })
+                          })
             response.on('end', function() {
               /*res.send(JSON.parse(body)) */
             })
