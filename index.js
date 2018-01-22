@@ -52,7 +52,6 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather','climat
             var body = ""
             response.on('data', function(data) {
                 body += data
-                console.log()
                 weather = JSON.parse(body)
                 var Temp= Math.round(weather.main.temp - 273.15) + '°C '
                 console.log("weather: " + weather.weather[0].main)
@@ -184,6 +183,7 @@ controller.hears(['time in (.*)','day in (.*)','date in (.*)','utc of (.*)'], 'd
 bot.reply(message,"Time in "+timeloc+" is "+timev.concat(secv))
 bot.reply(message,"Day, Date is "+dayv)
 bot.reply(message,"They follow: "+utcval)
-
   })
 });
+
+///Implement FreythHR and Calendar APi into the bot
