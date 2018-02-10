@@ -15,3 +15,9 @@
 
 Planning to add more Capabilities in near time and it can be easily enhanced and modified by including API's
 and integrating in the system for better processing.
+
+## Important Note
+Any user using this Repo should include this Git link and Contributor's name in their work.
+
+## Contributors
+K. N. Dheeraj (kndheeraj0@gmail.com)
