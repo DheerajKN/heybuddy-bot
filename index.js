@@ -21,7 +21,7 @@ console.log('Connected to Slack')
 })
 
 controller.hears(['hello','Hi','What\'s up??'], 'direct_message,direct_mention,mention', function(bot,message) {
-  bot.reply(message,'Hello there!! I\'m the Buddy bot who can help you in Weather and Currency Updates')
+  bot.reply(message,'Hello there!! I\'m the Buddy bot who can help you in Weather, Time and Currency Information')
   bot.reply(message,'Strucked Up!! Message me Help to know more about functionalities')
 });
 
