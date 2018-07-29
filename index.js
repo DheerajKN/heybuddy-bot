@@ -179,6 +179,36 @@ controller.hears(['time in (.*)','day in (.*)','date in (.*)','utc of (.*)'], 'd
 
     var utcv=$('.keypoints ul li').get(0)
     var utcval=$(utcv).text()
+    var options = {
+        protocol : 'http:',
+        host : 'api.openweathermap.org',
+        path : '/data/2.5/weather?q='+timeloc.replace(" ","+")+'&appid='+OpenweatherToken,
+        port : 80,
+        method : 'GET'
+      }
+
+    var request = http.request(options, function(response){
+        var body = ""
+        response.on('data', function(data) {
+          body += data
+          weather = JSON.parse(body)
+
+          function LongLatcheck(a,status){
+              var n = a > 0 ? status == 'lat' ? a+"°N" : a+"°E" : status == 'lon' ? Math.abs(a)+"°W" : Math.abs(a)+"°S";
+              return n;
+          }
+            bot.reply(message,timeloc+ " is located at " + LongLatcheck(weather.coord.lat,'lat') + " and " + LongLatcheck(weather.coord.lon,'lon'))
+            bot.reply(message,"Temperature Varies from " + Math.round(weather.main.temp_min - 273.15) + "°C  to " + Math.round(weather.main.temp_max - 273.15) + "°C  at this place")
+          })
+        response.on('end', function() {
+          /*res.send(JSON.parse(body)) */
+          })
+        })
+        request.on('error', function(e) {
+          console.log('Problem with request: ' + e.message)
+          bot.reply(message, "sorry, couldn't find Temperature info for city " + city)
+        })
+        request.end()
 
 bot.reply(message,"Time in "+timeloc+" is "+timev.concat(secv))
 bot.reply(message,"Day, Date is "+dayv)
@@ -186,4 +216,8 @@ bot.reply(message,"They follow: "+utcval)
   })
 });
 
-///Implement FreythHR and Calendar APi into the bot
+controller.hears(['Who created you', 'describe your creator', 'created by'], 'direct_message,direct_mention,mention', function(bot,message) {
+  bot.reply(message,"I was Created by K. N. Dheeraj")
+  bot.reply(message,"Developer, Data Analyst and an Amazing Person")
+  bot.reply(message,"Follow him on Twitter, Github and Linkedin: https://twitter.com/itsDheerajKn https://github.com/DheerajKN	https://www.linkedin.com/in/dheeraj-kn-878315106/")
+});
