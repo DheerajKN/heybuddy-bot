@@ -5,10 +5,12 @@
 **Developed for Slack** *Written in JS* `for Users`
 
 ```bash
- [weather | climate] in <CityName>
+ weather in <CityName>
  convert 20 BTC to inr
  10 usd to inr
  [time | day | date] in <CityName>
+ How far is 20 meter to km
+ climate in <CityName>
  You\'re created by??
 ```
 
@@ -19,6 +21,10 @@ and integrating in the system for better processing.
 
 ## Important Note
 Any user using this Repo should include this Git link and Contributor's name in their work.
+
+## In Release
+Adding other Metric Conversions into the bot like Weight, Area, Volume Temperature, Cooking and Time units
+Defragmenting each Bot Capability into different .js files
 
 ## Contributors
 K. N. Dheeraj (kndheeraj0@gmail.com)
