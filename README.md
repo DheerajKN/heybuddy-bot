@@ -9,9 +9,18 @@
  convert 20 BTC to inr
  10 usd to inr
  [time | day | date] in <CityName>
- How far is 20 meter to km
+ [change | map ] 20 meter into km
  climate in <CityName>
  You\'re created by??
+ Hi
+ Help
+```
+```
+Now Added Support for Metric Conversion
+    map 12 squaremillimeter into cm2
+    map 20 C into F
+    change 1200 mHz into Hertz
+    change 20 m/s into m/h  
 ```
 
 ### Don't worry even if you had typos in them or used related words. heybuddy bot can identify their near meaning and give responses.
@@ -23,8 +32,7 @@ and integrating in the system for better processing.
 Any user using this Repo should include this Git link and Contributor's name in their work.
 
 ## In Release
-Adding other Metric Conversions into the bot like Weight, Area, Volume Temperature, Cooking and Time units
-Defragmenting each Bot Capability into different .js files
+Few Values are hardcoded need to loosen them up
 
 ## Contributors
 K. N. Dheeraj (kndheeraj0@gmail.com)
