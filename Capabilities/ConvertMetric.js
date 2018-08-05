@@ -1,7 +1,7 @@
-const convert = require('convert-units')
+const convert = require('convert-units');
 module.exports = function highmetric(controller) {
 
-    controller.hears(['change (.*) (.*) into (.*)', 'map (\\d+) (.*) into (.*)'], 'direct_message,direct_mention,mention', function (bot, message) {
+    controller.hears(['change (\\d+) (.*) into (.*)', 'map (\\d+) (.*) into (.*)'], 'direct_message,direct_mention,mention', function (bot, message) {
 
         let value = message.match[1];
         let source = message.match[2];
@@ -52,7 +52,7 @@ module.exports = function highmetric(controller) {
             return Object.keys(object).find(key => object[key] === value);
         }
         function BotCall(val, sourceKey, destKey) {
-            bot.reply(message,value+' '+source+' = '+convert(val).from(sourceKey).to(destKey)+' '+dest)
+            bot.reply(message,value+' '+source+' = '+convert(val).from(sourceKey).to(destKey)+' '+dest);
         }
         function mapcheck(m, s) {
             for (const k in m) {
@@ -60,10 +60,10 @@ module.exports = function highmetric(controller) {
                     return true;
                 }
             }
-            return false
+            return false;
         }
         function keyExists(object, key){
-            return object.hasOwnProperty(key)
+            return object.hasOwnProperty(key);
         }
         Object.prototype.getKeyByValue = function( value ) {
             for( const prop in this ) {
@@ -72,82 +72,82 @@ module.exports = function highmetric(controller) {
                         return prop;
                 }
             }
-        }
+        };
         function destCheck(m, v, s, d) {
             if(keyExists(m,sre(d))){
-                BotCall(v, s, sre(d))
+                BotCall(v, s, sre(d));
             }
             else if(mapcheck(m, sre(d.toLowerCase()))){
-                BotCall(v, s, m.getKeyByValue(sre(d.toLowerCase())))
+                BotCall(v, s, m.getKeyByValue(sre(d.toLowerCase())));
             }
             else{
-                bot.reply(message, 'Destination Metric doesn\'t exist or this metric isn\'t appropriate for this conversion, try again!')
+                bot.reply(message, 'Destination Metric doesn\'t exist or this metric isn\'t appropriate for this conversion, try again!');
             }
         }
         function checkerAndPrinter(val, s, d) {
             if(keyExists(length, sre(s))){
-                destCheck(length, val, sre(s), d)
+                destCheck(length, val, sre(s), d);
             }
             else if(mapcheck(length, sre(s.toLowerCase()))){
-                destCheck(length, val,getKeyByValue(length, sre(s.toLowerCase())), d)
+                destCheck(length, val,getKeyByValue(length, sre(s.toLowerCase())), d);
             }
             else if(keyExists(area, sre(s))){
-                destCheck(area, val, sre(s), d)
+                destCheck(area, val, sre(s), d);
             }
             else if(mapcheck(area, sre(s.toLowerCase()))){
-                destCheck(area, val,getKeyByValue(area, sre(s.toLowerCase())), d)
+                destCheck(area, val,getKeyByValue(area, sre(s.toLowerCase())), d);
             }
             else if(keyExists(mass, sre(s))){
-                destCheck(mass, val, sre(s), d)
+                destCheck(mass, val, sre(s), d);
             }
             else if(mapcheck(mass, sre(s.toLowerCase()))){
-                destCheck(mass, val,getKeyByValue(mass, sre(s.toLowerCase())), d)
+                destCheck(mass, val,getKeyByValue(mass, sre(s.toLowerCase())), d);
             }
             else if(keyExists(volume, sre(s))){
-                destCheck(volume, val, sre(s), d)
+                destCheck(volume, val, sre(s), d);
             }
             else if(mapcheck(volume, sre(s.toLowerCase()))){
-                destCheck(volume, val,getKeyByValue(volume, sre(s.toLowerCase())), d)
+                destCheck(volume, val,getKeyByValue(volume, sre(s.toLowerCase())), d);
             }
             else if(keyExists(temp, sre(s))){
-                destCheck(temp, val, sre(s), d)
+                destCheck(temp, val, sre(s), d);
             }
             else if(mapcheck(temp, sre(s.toLowerCase()))){
-                destCheck(temp, val,getKeyByValue(temp, sre(s.toLowerCase())), d)
+                destCheck(temp, val,getKeyByValue(temp, sre(s.toLowerCase())), d);
             }
             else if(keyExists(time, s)){
-                destCheck(time, val, s, d)
+                destCheck(time, val, s, d);
             }
             else if(mapcheck(time, s.toLowerCase())){
-                destCheck(time, val,getKeyByValue(time, s.toLowerCase()), d)
+                destCheck(time, val,getKeyByValue(time, s.toLowerCase()), d);
             }
             else if(keyExists(frequency, sre(s))){
-                destCheck(frequency, val, sre(s), d)
+                destCheck(frequency, val, sre(s), d);
             }
             else if(mapcheck(frequency, sre(s.toLowerCase()))){
-                destCheck(frequency, val,getKeyByValue(frequency, sre(s.toLowerCase())), d)
+                destCheck(frequency, val,getKeyByValue(frequency, sre(s.toLowerCase())), d);
             }
             else if(keyExists(digital, sre(s))){
-                destCheck(digital, val, sre(s), d)
+                destCheck(digital, val, sre(s), d);
             }
             else if(mapcheck(digital, sre(s.toLowerCase()))){
-                destCheck(digital, val,getKeyByValue(digital, sre(s.toLowerCase())), d)
+                destCheck(digital, val,getKeyByValue(digital, sre(s.toLowerCase())), d);
             }
             else if(speed.includes(s)){
                if (speed.includes(d)){
-                   BotCall(val,s,d)
+                   BotCall(val,s,d);
                }
             }
             else if(pressure.includes(sre(s))){
                 if (pressure.includes(sre(d))){
-                    BotCall(val,sre(s), sre(d))
+                    BotCall(val,sre(s), sre(d));
                 }
             }
             else{
-                bot.reply(message, 'Source Metric doesn\'t exist, try using NIST / ISO unit writing standards!')
+                bot.reply(message, 'Source Metric doesn\'t exist, try using NIST / ISO unit writing standards!');
             }
         }
-        checkerAndPrinter(value, source, dest)
+        checkerAndPrinter(value, source, dest);
     }
     });
-}
+};

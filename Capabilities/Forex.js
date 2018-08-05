@@ -1,6 +1,6 @@
 module.exports = function forex(controller, request, cheerio) {
 
-    controller.hears(['convert (.*) (.*) to (.*)','(.*) (.*) to (.*)', 'How much is (.*) (.*) in (.*)','How much is (.*) (.*) to (.*)'], 'direct_message,direct_mention,mention', function(bot,message) {
+    controller.hears(['convert (\\d+) (.*) to (.*)','(\\d+) (.*) to (.*)', 'How much is (\\d+) (.*) in (.*)','How much is (\\d+) (.*) to (.*)'], 'direct_message,direct_mention,mention', function(bot,message) {
 
         var val = message.match[1];
         var sourceval = message.match[2];
