@@ -19,7 +19,7 @@ module.exports = function highmetric(controller) {
                 value = 1;
             }
 
-        const length = {'mm': 'millimeter', 'cm': 'centimeter', 'm': 'meter', 'in': 'inch', 'ft': 'foot', 'fathom': 'fathom','mi': 'mile'};
+        const length = {'mm': 'millimeter', 'cm': 'centimeter', 'm': 'meter', 'in': 'inch', 'ft': 'foot', 'fathom': 'fathom','mi': 'mile', 'km': 'kilometer'};
 
         const area = {"mm2": "squaremillimeter", "cm2": "squarecentimeter", "m2": "squaremeter", "ha": "hectare", "km2": "squarekilometer",
         "in2": "squareinch", "ft2": "squarefeet", "ac": "acre", "mi2": "squaremile"};
@@ -52,7 +52,7 @@ module.exports = function highmetric(controller) {
             return Object.keys(object).find(key => object[key] === value);
         }
         function BotCall(val, sourceKey, destKey) {
-            bot.reply(message,value+' '+source+' = '+convert(val).from(sourceKey).to(destKey)+' '+dest);
+            bot.reply(message,`${value} ${source} = ${convert(val).from(sourceKey).to(destKey)} ${dest}`);
         }
         function mapcheck(m, s) {
             for (const k in m) {

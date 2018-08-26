@@ -22,6 +22,7 @@
     "cheerio": "^1.0.0-rc.2",
     "convert-units": "^2.3.4",
     "express": "^4.16.3",
+    "google-translate-api": "^2.3.0",
     "handlebars": "^4.0.11",
     "hoek": "^5.0.3",
     "http": "0.0.0",

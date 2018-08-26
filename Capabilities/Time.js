@@ -23,9 +23,9 @@ controller.hears(['time in (.*)','day in (.*)','date in (.*)','utc of (.*)'], 'd
         var utcv=$('.keypoints ul li').get(0);
         var utcval=$(utcv).text();
 
-        bot.reply(message,"Time in "+timeloc+" is "+timev.concat(secv));
-        bot.reply(message,"Day, Date is "+dayv);
-        bot.reply(message,"They follow: "+utcval);
+        bot.reply(message,`Time in ${timeloc} is ${timev.concat(secv)}`);
+        bot.reply(message,`Day, Date is ${dayv}`);
+        bot.reply(message,`They follow: ${utcval}`);
     });
 });
 }
