@@ -1,6 +1,6 @@
 {
   "name": "heybuddy-bot",
-  "version": "1.6.17",
+  "version": "1.6.25",
   "description": "Helperbot",
   "main": "index.js",
   "scripts": {

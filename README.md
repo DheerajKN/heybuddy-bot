@@ -44,7 +44,7 @@ Creator's Information etc. right at your finger-tips!!
 Any user using this Repo should include this Git link and Contributor's name in their work.
 
 ## Updates
-Added Translation Feature, changed str.concat to `${}` and minor bug fixes
+Translation Related Changes for Performance Improvements and minor bug fixes
 
 ## In Release
 Need to Add witkit.ai for better User Experience, Test Cases and Build, Coverage Related Info for Developers.
