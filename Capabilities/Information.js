@@ -12,7 +12,7 @@ module.exports = function routes(controller) {
         bot.reply(message,'Time in <city> to get their present Day, Date, Time and UTC information');
         bot.reply(message,'map <sourceunit> in <destunit> for metric conversions');
         bot.reply(message, 'You can also ask Creator related information');
-        bot.reply(message, 'Translation is also therenow: translate <word> to <destinatinLanguage>');
+        bot.reply(message, 'Translation is also there now: translate <word> to <destinatinLanguage>');
     });
 
     controller.hears(['^[W|w]ho created you', '^[D|d]escribe your creator', '^[C|c]reated by'], 'direct_message,direct_mention,mention', function(bot,message) {
