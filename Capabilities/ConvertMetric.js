@@ -46,7 +46,7 @@ module.exports = function highmetric(controller) {
 
 
         function sre(n) {
-            return n.endsWith('s') ? n.slice(0, -1).replace(/ +/g, "") : n.replace(/ +/g, "");
+            return n.length > 2 ? (n.endsWith('s') ? n.slice(0, -1).replace(/ +/g, "") : n.replace(/ +/g, "") ) : n;
         }
         function getKeyByValue(object, value) {
             return Object.keys(object).find(key => object[key] === value);

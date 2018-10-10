@@ -10,12 +10,7 @@
  convert 20 BTC to inr
  10 usd to inr
  [time | day | date] in <CityName>
-<<<<<<< HEAD
  [change | map] 20 meter into km
-=======
- [change | map ] 20 meter into km
- climate in <CityName>
->>>>>>> c406a49fd48aa0dd308d1873b89632cb2fee98f1
  translate <word> to <DestinationLanguage>
  You\'re created by??
  Hi

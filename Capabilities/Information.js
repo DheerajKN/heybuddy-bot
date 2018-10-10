@@ -1,7 +1,8 @@
 module.exports = function routes(controller) {
 
     controller.hears(['^[H|h]ello','^[H|h]i','^[W|w]hat\'s up??'], 'direct_message,direct_mention,mention', function(bot,message) {
-        bot.reply(message,'Hello there!! I\'m the Buddy bot who can help you in Weather, Climate, Metric, Time and Currency Information');
+        bot.reply(message,'Hello there!! I\'m the Buddy bot who can help you in Weather, Climate, Metric, Time ' +
+            'and Currency Related Updates and Information');
         bot.reply(message,'Strucked Up!! Message me Help to know more about functionalities');
     });
 
@@ -11,8 +12,8 @@ module.exports = function routes(controller) {
         bot.reply(message,'convert val <sourceCurrency> to <destinationCurrency> for currency updates');
         bot.reply(message,'Time in <city> to get their present Day, Date, Time and UTC information');
         bot.reply(message,'map <sourceunit> in <destunit> for metric conversions');
-        bot.reply(message, 'You can also ask Creator related information');
-        bot.reply(message, 'Translation is also there now: translate <word> to <destinatinLanguage>');
+        bot.reply(message, 'You can also ask Creator related information by asking: who created you');
+        bot.reply(message, 'Translation is also there now by: translate <word> to <destinatinLanguage>');
     });
 
     controller.hears(['^[W|w]ho created you', '^[D|d]escribe your creator', '^[C|c]reated by'], 'direct_message,direct_mention,mention', function(bot,message) {
