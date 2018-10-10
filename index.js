@@ -11,6 +11,7 @@ var timer = require('./Capabilities/Time')
 var weather = require('./Capabilities/Weather')
 var forex = require('./Capabilities/Forex')
 var metric = require('./Capabilities/ConvertMetric')
+const translator = require('./Capabilities/Translation');
 
 const controller = Botkit.slackbot({
     debug: false
@@ -31,3 +32,4 @@ timer(controller, request, cheerio);
 weather(controller, request, cheerio, OpenweatherToken, http);
 forex(controller, request, cheerio);
 metric(controller);
+translator(controller)
