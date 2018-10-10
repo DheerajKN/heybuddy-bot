@@ -1,3 +1,4 @@
+
 module.exports = function timer(controller, request, cheerio) {
 controller.hears(['time in (.*)','day in (.*)','date in (.*)','utc of (.*)'], 'direct_message,direct_mention,mention', function(bot,message) {
     var timeloc = message.match[1];

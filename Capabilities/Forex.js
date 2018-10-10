@@ -53,5 +53,4 @@ module.exports = function forex(controller, request, cheerio) {
             }
         }
     });
-
 }

@@ -10,7 +10,12 @@
  convert 20 BTC to inr
  10 usd to inr
  [time | day | date] in <CityName>
+<<<<<<< HEAD
  [change | map] 20 meter into km
+=======
+ [change | map ] 20 meter into km
+ climate in <CityName>
+>>>>>>> c406a49fd48aa0dd308d1873b89632cb2fee98f1
  translate <word> to <DestinationLanguage>
  You\'re created by??
  Hi
@@ -48,6 +53,7 @@ Added Translation Feature, changed str.concat to `${}` and minor bug fixes
 
 ## In Release
 Need to Add witkit.ai for better User Experience, Test Cases and Build, Coverage Related Info for Developers.
+
 
 ## Contributors
 K. N. Dheeraj (kndheeraj0@gmail.com)
