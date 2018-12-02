@@ -38,7 +38,7 @@ and integrating in the system for better processing.
 
 ## Capabilities
 Weather & Climate Related Updates, Translation Feature, Time Related Information, Forex Conversions, Metric Conversions and also
-Creator's Information etc. right at your finger-tips!!
+Creator's Information etc. right at your finger-tips!!  
 That's not yet now you have each Capability of the bot being thoroughly tested!!  
 
 ## Important Note
