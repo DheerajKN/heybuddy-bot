@@ -39,15 +39,16 @@ and integrating in the system for better processing.
 ## Capabilities
 Weather & Climate Related Updates, Translation Feature, Time Related Information, Forex Conversions, Metric Conversions and also
 Creator's Information etc. right at your finger-tips!!
+That's not yet now you have each Capability of the bot being thoroughly tested!!  
 
 ## Important Note
 Any user using this Repo should include this Git link and Contributor's name in their work.
 
 ## Updates
-Translation Related Changes for Performance Improvements and minor bug fixes
+Translation Related Changes for Performance Improvements and Test Cases Added
 
 ## In Release
-Need to Add witkit.ai for better User Experience, Test Cases and Build, Coverage Related Info for Developers.
+Need to Add witkit.ai for better User Experience and Build, Coverage Related Info for Developers.
 
 
 ## Contributors

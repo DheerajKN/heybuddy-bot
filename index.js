@@ -29,7 +29,7 @@ controller.spawn({
 
 routes(controller);
 timer(controller, request, cheerio);
-weather(controller, request, cheerio, OpenweatherToken, http);
+weather(controller, request, OpenweatherToken, http);
 forex(controller, request, cheerio);
 metric(controller);
 translator(controller)

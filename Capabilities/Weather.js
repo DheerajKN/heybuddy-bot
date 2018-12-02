@@ -1,7 +1,6 @@
-module.exports = function weather(controller, request, cheerio, OpenweatherToken, http){
+module.exports = function weather(controller, request, OpenweatherToken, http){
 controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather'], 'direct_message,direct_mention,mention', function(bot,message) {
     var city = message.match[1];
-    console.log("city: "+city);
     if(undefined === city || '' === city || null === city)
     {
         bot.reply(message,"Didn't you forgot the city name? I am really sorry, currently I can't guess your city.");
@@ -20,7 +19,6 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather'], 'dire
             response.on('data', function(data) {
                 var weather = JSON.parse(data);
                 var Temp= Math.round(weather.main.temp - 273.15) + '°C ';
-                console.log("weather: " + weather.weather[0].main);
                 var msg="The Temp is "+ Temp + "and In " + city;
                 switch(weather.weather[0].main)
                 {
