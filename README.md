@@ -1,4 +1,7 @@
 # heybuddy-bot
+[![npm](https://img.shields.io/github/license/DheerajKN/heybuddy-bot.svg)](https://spdx.org/licenses/MIT)
+[![current_build](https://img.shields.io/badge/dynamic/json.svg?label=current&url=https%3A%2F%2Fraw.githubusercontent.com%2FDheerajKN%2Fheybuddy-bot%2Fmaster%2Fpackage.json&query=%24.version&colorB=green)]()
+[![issues](https://img.shields.io/github/issues/DheerajKN/heybuddy-bot.svg)]()
 
 ## Helper bot that provides quick info using chat over Slack
 
@@ -38,7 +41,7 @@ and integrating in the system for better processing.
 
 ## Capabilities
 Weather & Climate Related Updates, Translation Feature, Time Related Information, Forex Conversions, Metric Conversions and also
-Creator's Information etc. right at your finger-tips!!
+Creator's Information etc. right at your finger-tips!!  
 That's not yet now you have each Capability of the bot being thoroughly tested!!  
 
 ## Important Note
@@ -49,7 +52,6 @@ Translation Related Changes for Performance Improvements and Test Cases Added
 
 ## In Release
 Need to Add witkit.ai for better User Experience and Build, Coverage Related Info for Developers.
-
 
 ## Contributors
 K. N. Dheeraj (kndheeraj0@gmail.com)

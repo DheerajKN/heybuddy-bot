@@ -14,7 +14,8 @@ var metric = require('./Capabilities/ConvertMetric')
 const translator = require('./Capabilities/Translation');
 
 const controller = Botkit.slackbot({
-    debug: false
+    debug: false,
+    clientSigningSecret: slackToken
 });
 
 controller.spawn({
