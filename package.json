@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --exit",
-    "start": "node index.js"
+    "start": "node index.js",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/*.js"
   },
   "repository": {
     "type": "git",
