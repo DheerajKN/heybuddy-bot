@@ -18,3 +18,7 @@ install:
 script:
   - istanbul cover ./node_modules/mocha/bin/_mocha test/*.js --reporter lcovonly -- -R spec
   - codecov
+  - snyk test
+
+after_success:
+    - snyk monitor

@@ -1,6 +1,6 @@
 # heybuddy-bot
 [![npm](https://img.shields.io/github/license/DheerajKN/heybuddy-bot.svg)](https://spdx.org/licenses/MIT)
-[![current_build](https://img.shields.io/badge/dynamic/json.svg?label=current&url=https%3A%2F%2Fraw.githubusercontent.com%2FDheerajKN%2Fheybuddy-bot%2Fmaster%2Fpackage.json&query=%24.version&colorB=green)]()
+[![current_build](https://img.shields.io/badge/dynamic/json.svg?label=current_build&url=https%3A%2F%2Fraw.githubusercontent.com%2FDheerajKN%2Fheybuddy-bot%2Fmaster%2Fpackage.json&query=%24.version&colorB=green)]()
 [![issues](https://img.shields.io/github/issues/DheerajKN/heybuddy-bot.svg)]()
 [![build status](https://travis-ci.org/DheerajKN/heybuddy-bot.svg?branch=master)](https://travis-ci.org/DheerajKN/heybuddy-bot.svg?branch=master)
 [![coverage](https://img.shields.io/codecov/c/github/DheerajKN/heybuddy-bot/master.svg)](https://codecov.io/gh/DheerajKN/heybuddy-bot/branch/master/graph/badge.svg)
@@ -11,7 +11,10 @@
 
 ## Helper bot that provides quick info using chat over Slack
 
-> **Developed for Slack** *Written in JS* `for Users`
+> Buddy-bot is a simple request answering bot that helps you to find results using API, packages
+for most of your daily queries!! 
+
+**Developed for Slack** *Written in JS* `for Users`
 
 ```bash
  weather in <CityName>
