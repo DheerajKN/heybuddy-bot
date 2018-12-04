@@ -14,13 +14,7 @@ before_script:
 install:
   - npm install
   - npm install -g codecov
-  - npm install -g snyk
 
 script:
   - istanbul cover ./node_modules/mocha/bin/_mocha test/*.js --reporter lcovonly -- -R spec
   - codecov
-  - snyk auth $SNYK_TOKEN
-  - snyk test
-
-after_success:
-  - snyk monitor

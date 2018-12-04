@@ -4,7 +4,7 @@
   "description": "Helperbot",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test && mocha --exit",
+    "test": "mocha --exit",
     "start": "node index.js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/*.js"
   },
@@ -34,7 +34,6 @@
     "money": "^0.2.0",
     "path": "^0.12.7",
     "request": "^2.88.0",
-    "snyk": "^1.114.0",
     "uuid": "^3.3.2"
   }
 }
