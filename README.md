@@ -2,10 +2,15 @@
 [![npm](https://img.shields.io/github/license/DheerajKN/heybuddy-bot.svg)](https://spdx.org/licenses/MIT)
 [![current_build](https://img.shields.io/badge/dynamic/json.svg?label=current&url=https%3A%2F%2Fraw.githubusercontent.com%2FDheerajKN%2Fheybuddy-bot%2Fmaster%2Fpackage.json&query=%24.version&colorB=green)]()
 [![issues](https://img.shields.io/github/issues/DheerajKN/heybuddy-bot.svg)]()
+[![build status](https://travis-ci.org/DheerajKN/heybuddy-bot.svg)](https://travis-ci.org/DheerajKN/heybuddy-bot)
+[![coverage](https://coveralls.io/repos/DheerajKN/heybuddy-bot/badge.svg?branch=master)](https://coveralls.io/r/DheerajKN/heybuddy-bot)
+[![dependency_status](https://img.shields.io/david/DheerajKN/heybuddy-bot.svg)](https://img.shields.io/DheerajKN/heybuddy-bot.svg?style=flat-square)
+[![OpenSource](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+[![project_size](https://img.shields.io/github/repo-size/badges/shields.svg)](https://img.shields.io/github/repo-size/badges/shields.svg)
 
 ## Helper bot that provides quick info using chat over Slack
 
-**Developed for Slack** *Written in JS* `for Users`
+> **Developed for Slack** *Written in JS* `for Users`
 
 ```bash
  weather in <CityName>
