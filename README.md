@@ -5,7 +5,7 @@
 [![build status](https://travis-ci.org/DheerajKN/heybuddy-bot.svg?branch=master)](https://travis-ci.org/DheerajKN/heybuddy-bot.svg?branch=master)
 [![coverage](https://img.shields.io/codecov/c/github/DheerajKN/heybuddy-bot/master.svg)](https://codecov.io/gh/DheerajKN/heybuddy-bot/branch/master/graph/badge.svg)
 [![dependency_status](https://img.shields.io/david/DheerajKN/heybuddy-bot.svg)](https://img.shields.io/DheerajKN/heybuddy-bot.svg?style=flat-square)
-[![Vulnerabilities](https://snyk.io/test/github/DheerajKN/heybuddy-bot/badge.svg?style=plastic)](https://snyk.io/test/github/DheerajKN/heybuddy-bot/badge.svg)
+[![Vulnerabilities](https://snyk.io/test/github/DheerajKN/heybuddy-bot/badge.svg)](https://snyk.io/test/github/DheerajKN/heybuddy-bot/badge.svg)
 [![OpenSource](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 [![project_size](https://img.shields.io/github/repo-size/badges/shields.svg)](https://img.shields.io/github/repo-size/badges/shields.svg)
 
