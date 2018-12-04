@@ -1,10 +1,10 @@
 {
   "name": "heybuddy-bot",
-  "version": "1.0.0",
+  "version": "1.7.36",
   "description": "Helperbot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified",
+    "test": "mocha --exit",
     "start": "node index.js"
   },
   "repository": {
@@ -18,15 +18,20 @@
   },
   "homepage": "https://github.com/DheerajKN/heybuddy-bot#readme",
   "dependencies": {
-    "botkit": "^0.6.8",
+    "assert": "^1.4.1",
+    "botkit": "^0.6.21",
+    "botkit-mock": "^0.1.11",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.2",
+    "convert-units": "^2.3.4",
+    "express": "^4.16.3",
+    "google-translate-api": "^2.3.0",
     "handlebars": "^4.0.11",
+    "hoek": "^5.0.4",
     "http": "0.0.0",
+    "mocha": "^5.2.0",
     "money": "^0.2.0",
     "path": "^0.12.7",
-    "request": "^2.83.0",
-    "uuid": "^3.2.1",
-    "witbot": "^2.1.0"
+    "request": "^2.88.0",
+    "uuid": "^3.3.2"
   }
 }
