@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:base64url:20180511':
+    - botkit > botbuilder > base64url:
+        reason: None given
+        expires: '2019-01-03T18:05:41.538Z'
+    - botkit-mock > botkit > botbuilder > base64url:
+        reason: None given
+        expires: '2019-01-03T18:05:41.538Z'
+  'npm:safe-eval:20170830':
+    - google-translate-api > safe-eval:
+        reason: None given
+        expires: '2019-01-03T18:05:41.538Z'
+patch: {}
