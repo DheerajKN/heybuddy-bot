@@ -5,7 +5,7 @@ const Weather = require('../Capabilities/Weather')
 
 const user = require('./Info.test')
 
-var OpenweatherToken='7bf212dface8e17114014161ddce3318';
+var OpenweatherToken='<openweather-Token>';
 var http= require('http');
 var request=require('request');
 
