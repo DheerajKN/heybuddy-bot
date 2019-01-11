@@ -59,7 +59,7 @@ Any user using this Repo should include this Git link and Contributor's name in 
 Translation Related Changes for Performance Improvements and Test Cases Added
 
 ## In Release
-Need to Add witkit.ai for better User Experience and Build, Coverage Related Info for Developers.
+Need to Add witkit.ai for better User Experience.
 
 ## Contributors
 K. N. Dheeraj (kndheeraj0@gmail.com)

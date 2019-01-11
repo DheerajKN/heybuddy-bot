@@ -9,7 +9,7 @@ controller.hears(['time in (.*)','day in (.*)','date in (.*)','utc of (.*)'], 'd
         bot.reply(message.text,"Location not added please type again!!");
     }
 
-    request("https://time.is/"+timeloc.replace(" ","_"),function(err,resp,body){
+    request(`https://time.is/${timeloc.replace(" ","_")}`,function(err,resp,body){
         var $=cheerio.load(body);
 
         var timev=$('div#twd').text();

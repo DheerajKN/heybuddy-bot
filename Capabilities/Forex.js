@@ -28,7 +28,7 @@ module.exports = function forex(controller, request, cheerio) {
             bot.reply(message,'Use this format change <value> <unit> into <unit> for metric conversion');
         }
         else{
-            request("https://exchangerate.guru/"+sourceval.toLowerCase()+"/"+destval.toLowerCase()+"/"+val+"/",function(err,resp,body){
+            request(`https://exchangerate.guru/${sourceval.toLowerCase()}/${destval.toLowerCase()}/${val}/`,function(err,resp,body){
                 var $=cheerio.load(body);
                 var valx=$('.form-control').get(1);
                 var $valx=$(valx).attr('value');

@@ -9,7 +9,7 @@ controller.hears(['weather in (.*)', 'weather of (.*)','(.*)\'s weather'], 'dire
         var options = {
             protocol : 'http:',
             host : 'api.openweathermap.org',
-            path : '/data/2.5/weather?q='+city.replace(" ","+")+'&appid='+OpenweatherToken,
+            path : `/data/2.5/weather?q=${city.replace(" ","+")}&appid=${OpenweatherToken}`,
             port : 80,
             method : 'GET'
         };
