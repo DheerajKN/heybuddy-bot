@@ -24,7 +24,7 @@
     "botkit-mock": "^0.1.11",
     "cheerio": "^1.0.0-rc.2",
     "convert-units": "^2.3.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "google-translate-api": "^2.3.0",
     "handlebars": "^4.7.7",
     "hoek": "^5.0.4",
